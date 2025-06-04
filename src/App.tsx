@@ -1,16 +1,12 @@
-import { useState } from 'react'
-
-import './App.css'
+import AsciiConverter from './components/AsciiConverter';
 
 function App() {
-  
   return (
-    <>
-      <div>
-        <h1 className = "text-3xl bg-amber-500">Hello World This is on Typescript</h1>
-      </div>
-    </>
-  )
+    <div>
+      <h1 className="text-2xl text-center my-4">🖼️ Image to ASCII Art Converter</h1>
+      <AsciiConverter />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,54 +1,120 @@
-# React + TypeScript + Vite
+# 🖼️ Image to ASCII Art Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fullstack web application that converts images into ASCII art. The frontend is built with **React + Vite + TypeScript**, and the backend uses **Django + Django REST Framework** with **OpenCV** for image processing.
 
-Currently, two official plugins are available:
+---
+## 🖼️ Example Output
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔹 Original Image
+<img src="/nier2b.jpg" width="300"/>
 
-## Expanding the ESLint configuration
+### 🔸 ASCII Output (Width: 100)
+<img src="/100width.jpg" width="500"/>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🔸 ASCII Output (Width: 400)
+<img src="/400width.jpg" width="500"/>
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 Live Demo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+> _(Optional: Add link here if deployed)_
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🧱 Tech Stack
+
+### Frontend
+- React
+- Vite
+- TypeScript
+- Axios
+
+### Backend
+- Django
+- Django REST Framework
+- OpenCV (cv2)
+- NumPy
+- Pillow
+
+---
+
+## 📦 Installation
+
+### ⚙️ Backend (Django)
+
+```bash
+# Setup virtual environment
+python -m venv env
+source env/bin/activate  # or use `env\Scripts\activate` on Windows
+
+# Install dependencies
+pip install django djangorestframework django-cors-headers opencv-python numpy pillow
+
+# Create Django project and app
+django-admin startproject backend
+cd backend
+python manage.py startapp api
+
+# Run migrations
+python manage.py migrate
+
+# Start the server
+python manage.py runserver
+
+# Create Vite + React + TS app
+npm create vite@latest frontend -- --template react-ts
+cd frontend
+
+# Install dependencies
+npm install axios
+
+# Start the dev server
+npm run dev
+
+🚀 Usage
+
+    Upload an image from the frontend.
+
+    Choose output width for the ASCII art.
+
+    The image is sent to the Django backend.
+
+    Backend processes the image with OpenCV and returns ASCII characters.
+
+    ASCII output is rendered in a styled <pre> block.
+
+🧠 Core Features
+
+    🎨 Upload images of any size and type (JPG, PNG, etc.)
+
+    ✨ Real-time ASCII conversion
+
+    📏 Adjustable width (for text art size)
+
+    ⚙️ Fully decoupled frontend/backend
+
+    🔒 Secure file handling using MultiPartParser
+
+Project Structure
+
+image-to-ascii/
+├── backend/
+│   ├── api/
+│   │   ├── views.py
+│   │   ├── utils.py  # ASCII conversion logic
+│   │   └── urls.py
+│   ├── backend/
+│   │   ├── settings.py
+│   └── manage.py
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── AsciiConverter.tsx
+│   │   └── App.tsx
+│   └── vite.config.ts
+└── README.md
+
+
+📝 License
+
+This project is open source and available under the MIT License.

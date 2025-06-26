@@ -6,18 +6,16 @@ This is a fullstack web application that converts images into ASCII art. The fro
 ## 🖼️ Example Output
 
 ### 🔹 Original Image
-<img src="/nier2b.jpg" width="300"/>
+<img src="/public/nier2b.jpg" width="300"/>
 
 ### 🔸 ASCII Output (Width: 100)
-<img src="/100width.jpg" width="500"/>
+<img src="/public/100width.jpg" width="500"/>
 
 ### 🔸 ASCII Output (Width: 400)
-<img src="/400width.jpg" width="500"/>
+<img src="/public/400width.jpg" width="500"/>
 
 
-## 🌐 Live Demo
 
-> _(Optional: Add link here if deployed)_
 
 ---
 

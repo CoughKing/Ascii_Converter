@@ -1,7 +1,7 @@
 # 🖼️ Image to ASCII Art Converter
 
 This is a fullstack web application that converts images into ASCII art. The frontend is built with **React + Vite + TypeScript**, and the backend uses **Django + Django REST Framework** with **OpenCV** for image processing.
-
+Yes, this project was inspired from Acerola "Turn Games into Text"
 ---
 ## 🖼️ Example Output
 

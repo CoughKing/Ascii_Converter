@@ -11,7 +11,7 @@ export default function AsciiConverter() {
     fontFamily: 'monospace',
     fontSize: '14px'
   });
-  const [aspectRatio, setAspectRatio] = useState(1);
+  //const [aspectRatio, setAspectRatio] = useState(1);
   const preRef = useRef<HTMLPreElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -201,7 +201,7 @@ export default function AsciiConverter() {
             boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
             whiteSpace: 'pre',
             margin: '0 auto',
-            lineHeight: theme.lineHeight || '1.2',
+            //lineHeight: theme.lineHeight || '1.2',
             display: 'inline-block',
             overflow: 'hidden',
             textOverflow: 'ellipsis'

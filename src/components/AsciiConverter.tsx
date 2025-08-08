@@ -11,7 +11,7 @@ export default function AsciiConverter() {
     fontFamily: 'monospace',
     fontSize: '14px'
   });
-  //const [aspectRatio, setAspectRatio] = useState(1);
+  const [aspectRatio, setAspectRatio] = useState(1);
   const preRef = useRef<HTMLPreElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
